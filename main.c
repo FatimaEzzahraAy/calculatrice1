@@ -6,13 +6,14 @@ int main()
     char op;
    float x,y,r;
 
-
-
+   do
+    {
     printf("Entrez operation souhaitez:+ ou - ou / ou * \n");
-    scanf("%c", &op);
+    scanf("\n%c", &op);
     if (op == 'q'){
         goto jum;
     }
+
     printf("op : %c \n", op);
     printf("Entrez un numero: ");
     scanf("%f", &x);
@@ -39,6 +40,7 @@ int main()
             else printf("Erreur");
     }
 
+    }while ( op != 'q' );
     jum:
 
     return 0;
